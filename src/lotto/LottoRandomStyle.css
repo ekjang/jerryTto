@@ -1,0 +1,62 @@
+.lott-random-header {
+    margin: auto;
+    width: 970px;
+    height: 100vh;
+}
+
+.lott-random-main {
+    width: 970px;
+    display: flex;
+}
+
+.lotto-random-template{
+    margin: 5px;
+    width: 970px;
+    height: 100vh;
+}
+
+.lotto-random-header{
+    margin-top: auto;
+    width: 100%;
+    height: 40px;
+    background-color: pink;
+    font-style: italic;
+    font-size: 28px;
+    color: deeppink;
+    text-align: center;
+    vertical-align: center;
+    border-bottom: 4px solid deeppink;
+}
+
+.lotto-random-sidemenu{
+    width: 300px;
+    height: 700px;
+    background-color: white;
+    border-top: 2px solid lightpink;
+    border-left: 2px solid lightpink;
+    border-bottom: 2px solid lightpink;
+}
+
+.lotto-random-contents{
+    width: 677px;
+    height: 700px;
+    background-color: white;
+    border: 2px solid lightpink;
+    overflow: scroll;
+}
+
+.clear-button{
+    width: 70px;
+    height: 30px;
+    color: white;
+    background-color: lightpink;
+    margin: 10px 550px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid mistyrose;
+    position: absolute;
+}
+
+.blank-style{
+    margin-bottom: 60px;
+}
