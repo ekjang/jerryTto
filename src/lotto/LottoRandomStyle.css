@@ -21,11 +21,12 @@
     height: 40px;
     background-color: pink;
     font-style: italic;
-    font-size: 28px;
+    font-size: 32px;
     color: deeppink;
     text-align: center;
     vertical-align: center;
     border-bottom: 4px solid deeppink;
+    font-family: HY바다M;
 }
 
 .lotto-random-sidemenu{
@@ -46,15 +47,17 @@
 }
 
 .clear-button{
-    width: 70px;
-    height: 30px;
+    width: 80px;
+    height: 40px;
     color: white;
     background-color: lightpink;
     margin: 10px 550px;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
     border: 2px solid mistyrose;
     position: absolute;
+    border-radius: 40%;
+    font-family: HY바다M;
 }
 
 .blank-style{

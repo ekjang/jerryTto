@@ -5,15 +5,17 @@
     align-items: flex-start;
 }
 .number-button{
-    width: 150px;
+    width: 100px;
     height: 50px;
     color: white;
     background-color: lightpink;
-    margin-left: 60px;
+    margin-left: 110px;
     /*margin: 20px 50px;*/
     font-size: 20px;
     cursor: pointer;
     border: 2px solid mistyrose;
+    border-radius: 40%;
+    font-family: HY바다M;
 }
 
 .number-plate-box-contents{

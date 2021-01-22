@@ -1,4 +1,4 @@
-// /* eslint-disablt */ //문법 warning console에 뜨지 않도록
+/* eslint-disablt */ //문법 warning console에 뜨지 않도록
 
 import React from "react";
 import './App.css';

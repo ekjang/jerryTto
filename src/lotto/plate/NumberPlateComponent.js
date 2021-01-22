@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./NumberPlateStyle.css";
 import NumberPlateBoxComponent from "./NumberPlateBoxComponent";
+import OptionPlateComponent from "./OptionPlateComponent";
 
 class NumberPlateComponent extends Component {
 
@@ -12,13 +13,16 @@ class NumberPlateComponent extends Component {
     render() {
         return (
             <div>
-                <div className="text-style">
-                    포함하고 싶은 숫자를 선택하세요😊
+                <div className="number-plate-all-box">
+                    <OptionPlateComponent
+                        optionVal={this.props.optionVal}
+                        optionHandleChange={this.props.optionHandleChange}
+                    />
                 </div>
                 <div className="number-plate-all-box">
                     <input type="checkbox" checked={this.props.allCheck} onChange={this.allHandleChange} />
                     <span>ALL</span>
-                    <button className="number-button" onClick={this.props.handleButtonOnClick}>Generate</button>
+                    <button className="number-button" onClick={this.props.handleButtonOnClick}>만들어</button>
                 </div>
                 <div className="number-plate-contents">
                     {this.props.selected.map((select, index)=>
@@ -26,7 +30,7 @@ class NumberPlateComponent extends Component {
                                 key={index}
                                 number={index+1}
                                 selected={select}
-                                handleChange={this.props.handleChange}
+                                numberHandleChange={this.props.numberHandleChange}
                             />
                     )}
                 </div>

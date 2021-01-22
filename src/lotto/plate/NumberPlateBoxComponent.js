@@ -5,7 +5,7 @@ class NumberPlateBoxComponent extends Component {
 
     handleChange = (e) => {
         const {checked} = e.target;
-        this.props.handleChange(checked, this.props.number)
+        this.props.numberHandleChange(checked, this.props.number)
     }
 
     render() {

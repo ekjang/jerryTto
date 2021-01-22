@@ -8,7 +8,7 @@ class LottoRandomContents extends Component {
         return (
             <div className="lotto-random-contents">
                 <div className="blank-style">
-                    <button className="clear-button" onClick={this.props.clearButtonOnClick}>Clear</button>
+                    <button className="clear-button" onClick={this.props.clearButtonOnClick}>지워</button>
                 </div>
                 <div>
                     {lottoNumbers.map((lottoNumber, i) =>

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./LottoRandomStyle.css";
 import NumberPlateComponent from "./plate/NumberPlateComponent";
+import OptionPlateComponent from "./plate/OptionPlateComponent";
 
 class LottoRandomSideMenu extends Component {
 
@@ -11,8 +12,10 @@ class LottoRandomSideMenu extends Component {
                     allCheck={this.props.allCheck}
                     selected={this.props.selected}
                     allHandleChange={this.props.allHandleChange}
-                    handleChange={this.props.handleChange}
+                    numberHandleChange={this.props.numberHandleChange}
                     handleButtonOnClick={this.props.handleButtonOnClick}
+                    optionVal={this.props.optionVal}
+                    optionHandleChange={this.props.optionHandleChange}
                 />
             </div>
         );
