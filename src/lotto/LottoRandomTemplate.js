@@ -79,6 +79,8 @@ class LottoRandomTemplate extends Component {
         const numbers = [];
         let selectedNumberCount = 0;
 
+        console.log(optionVal)
+
         selected.forEach((s, i) => {
             if(optionVal === "Include") {
                 if(s) {
@@ -93,10 +95,11 @@ class LottoRandomTemplate extends Component {
             }
         })
 
+        console.log(numbers)
         ///////////////////////////////////////////
         //선택 숫자 포함일 때
         if(optionVal === "Include") {
-            if (selectedNumberCount < 7) {
+            if (numbers.length < 7) {
                 alert("7개 이상(보너스 번호 포함)의 번호를 선택해야 합니다.")
                 return;
             } else {
@@ -106,8 +109,8 @@ class LottoRandomTemplate extends Component {
         ///////////////////////////////////////////
         //선택 숫자 제외일 때
         } else if(optionVal === "Exclude") {
-            if (selectedNumberCount > 38) {
-                alert("7개 이상(보너스 번호 포함)의 번호를 제외할 수 없습니다.")
+            if (numbers.length < 7) {
+                alert("39개 이상(보너스 번호 포함)의 번호를 제외할 수 없습니다.")
             } else {
                 alert("번호를 5개 생성합니다.")
                 this.selectBundle(0, numbers)
