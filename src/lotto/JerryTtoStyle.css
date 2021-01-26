@@ -4,15 +4,21 @@
     height: 100vh;
 }
 
-.lott-random-main {
-    width: 970px;
+.lotto-random-main {
+    /*width: 970px;*/
+    width: 100%;
+    height: 100%;
     display: flex;
+    opacity: 0.8
 }
 
 .lotto-random-template{
-    margin: 5px;
-    width: 970px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    resize: initial;
+    /*margin: 5px;*/
+    /*width: 970px;*/
+    /*height: 100vh;*/
 }
 
 .lotto-random-header{
@@ -62,4 +68,10 @@
 
 .blank-style{
     margin-bottom: 60px;
+}
+
+.image-style {
+    margin-left: 10px;
+    align-items: center;
+    resize: initial;
 }

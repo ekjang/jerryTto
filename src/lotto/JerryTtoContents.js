@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import "./LottoRandomStyle.css";
+import "./JerryTtoStyle.css";
 import LottoBoxComponent from "./numberBox/LottoBoxComponent";
 
-class LottoRandomContents extends Component {
+class JerryTtoContents extends Component {
     render() {
         const lottoNumbers = this.props.lottoNumbers
         return (
@@ -23,4 +23,4 @@ class LottoRandomContents extends Component {
     }
 }
 
-export default LottoRandomContents;
+export default JerryTtoContents;

@@ -61,3 +61,10 @@
   padding: 20px;
   background: aquamarine;
 }
+
+.bg-style {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+}

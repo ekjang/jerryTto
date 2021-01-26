@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import LottoRandomHeader from "./LottoRandomHeader";
-import LottoRandomSideMenu from "./LottoRandomSideMenu";
-import LottoRandomContents from "./LottoRandomContents";
-import "./LottoRandomStyle.css";
+import JerryTtoHeader from "./JerryTtoHeader";
+import JerryTtoSideMenu from "./JerryTtoSideMenu";
+import JerryTtoContents from "./JerryTtoContents";
+import "./JerryTtoStyle.css";
+import JerryTtoTopMenu from "./JerryTtoTopMenu";
 
-class LottoRandomTemplate extends Component {
+class JerryTtoTemplate extends Component {
 
     state = {
         allCheck : {},
@@ -95,7 +96,6 @@ class LottoRandomTemplate extends Component {
             }
         })
 
-        console.log(numbers)
         ///////////////////////////////////////////
         //선택 숫자 포함일 때
         if(optionVal === "Include") {
@@ -149,9 +149,10 @@ class LottoRandomTemplate extends Component {
     render() {
         return (
             <div className="lotto-random-template">
-                <LottoRandomHeader />
-                <div className="lott-random-main">
-                    <LottoRandomSideMenu
+                <JerryTtoHeader />
+                {/*<JerryTtoTopMenu />*/}
+                <div className="lotto-random-main">
+                    <JerryTtoSideMenu
                         allCheck={this.state.allCheck}
                         selected={this.state.selected}
                         allHandleChange={this.allHandleChange}
@@ -160,7 +161,7 @@ class LottoRandomTemplate extends Component {
                         optionVal={this.optionVal}
                         optionHandleChange={this.optionHandleChange}
                     />
-                    <LottoRandomContents
+                    <JerryTtoContents
                         lottoNumbers={this.state.lottoNumbers}
                         clearButtonOnClick={this.clearButtonOnClick}
                     />
@@ -171,4 +172,4 @@ class LottoRandomTemplate extends Component {
 
 }
 
-export default LottoRandomTemplate;
+export default JerryTtoTemplate;

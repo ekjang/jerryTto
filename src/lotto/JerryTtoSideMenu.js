@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import "./LottoRandomStyle.css";
+import "./JerryTtoStyle.css";
 import NumberPlateComponent from "./plate/NumberPlateComponent";
-import OptionPlateComponent from "./plate/OptionPlateComponent";
+import CrawlerTemplate from "./crawler/CrawlerTemplate"
 
-class LottoRandomSideMenu extends Component {
+class JerryTtoSideMenu extends Component {
 
     render() {
         return (
@@ -17,9 +17,10 @@ class LottoRandomSideMenu extends Component {
                     optionVal={this.props.optionVal}
                     optionHandleChange={this.props.optionHandleChange}
                 />
+                {/*<CrawlerTemplate></CrawlerTemplate>*/}
             </div>
         );
     }
 }
 
-export default LottoRandomSideMenu;
+export default JerryTtoSideMenu;

@@ -2,13 +2,16 @@
 
 import React from "react";
 import './App.css';
-import LottoRandomTemplate from "./lotto/LottoRandomTemplate";
+import JerryTtoTemplate from "./lotto/JerryTtoTemplate";
+import bgJerry from "./png/bg_jerry.svg"
 
 function App() {
 
     return (
-        <div className="lotto-random-template">
-            <LottoRandomTemplate />
+        <div className="bg-style" style={{backgroundImage:`url(${bgJerry})`}}>
+            <div className="lotto-random-template" >
+                <JerryTtoTemplate />
+            </div>
         </div>
     );
 }
