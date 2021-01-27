@@ -4,27 +4,28 @@
     height: 100vh;
 }
 
+
+
 .lotto-random-main {
-    /*width: 970px;*/
-    width: 100%;
+    width: 970px;
+    /*width: 100%;*/
     height: 100%;
     display: flex;
     opacity: 0.8
 }
 
 .lotto-random-template{
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
     resize: initial;
     /*margin: 5px;*/
-    /*width: 970px;*/
-    /*height: 100vh;*/
+    width: 970px;
+    height: 95vh;
 }
 
 .lotto-random-header{
     margin-top: auto;
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: pink;
     font-style: italic;
     font-size: 32px;
@@ -35,18 +36,33 @@
     font-family: HY바다M;
 }
 
+.image-style {
+    margin-top: 5px;
+    margin-left: 10px;
+    resize: initial;
+}
+
 .lotto-random-sidemenu{
     width: 300px;
-    height: 700px;
+    height: 750px;
     background-color: white;
     border-top: 2px solid lightpink;
     border-left: 2px solid lightpink;
     border-bottom: 2px solid lightpink;
 }
 
+.lotto-top-menu {
+    background-color: lightpink;
+    /*width: 970px;*/
+    width: 100%;
+    height: 50px;
+    display: flex;
+    opacity: 0.7
+}
+
 .lotto-random-contents{
-    width: 590px;
-    height: 700px;
+    width: 100%;
+    height: 750px;
     background-color: white;
     border: 2px solid lightpink;
     overflow: scroll;
@@ -57,7 +73,9 @@
     height: 40px;
     color: white;
     background-color: lightpink;
-    margin: 10px 480px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /*margin: 10px 480px;*/
     font-size: 20px;
     cursor: pointer;
     border: 2px solid mistyrose;
@@ -70,8 +88,33 @@
     margin-bottom: 60px;
 }
 
-.image-style {
-    margin-left: 10px;
-    align-items: center;
-    resize: initial;
+
+
+
+@media (min-width: 480px){
+    .lotto-random-template{
+        width: auto
+    }
+
+    .lotto-random-main{
+
+    }
+
+    .lotto-random-header{
+
+    }
+
+    .image-style {
+        margin-top: 5px;
+        margin-left: 10px;
+        resize: initial;
+    }
+
+    .lotto-random-sidemenu{
+
+    }
+
+    .lotto-random-contents{
+
+    }
 }

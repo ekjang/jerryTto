@@ -7,7 +7,9 @@ class JerryTtoHeader extends Component {
         return (
             <div className="lotto-random-header">
                 <b>Hello JERRYtto</b>
-                <img className="image-style" src={main} />
+                <span>
+                    <img className="image-style" src={main} />
+                </span>
             </div>
         );
     }

@@ -8,11 +8,11 @@ import bgJerry from "./png/bg_jerry.svg"
 function App() {
 
     return (
-        <div className="bg-style" style={{backgroundImage:`url(${bgJerry})`}}>
+        // <div className="bg-style" style={{backgroundImage:`url(${bgJerry})`}}>
             <div className="lotto-random-template" >
                 <JerryTtoTemplate />
             </div>
-        </div>
+        // </div>
     );
 }
 

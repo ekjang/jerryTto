@@ -63,6 +63,7 @@
 }
 
 .bg-style {
+  /*background-size: 970px;*/
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top left;

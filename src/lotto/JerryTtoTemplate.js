@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import JerryTtoHeader from "./JerryTtoHeader";
 import JerryTtoSideMenu from "./JerryTtoSideMenu";
 import JerryTtoContents from "./JerryTtoContents";
-import "./JerryTtoStyle.css";
 import JerryTtoTopMenu from "./JerryTtoTopMenu";
+import "./JerryTtoStyle.css";
 
 class JerryTtoTemplate extends Component {
 
     state = {
-        allCheck : {},
-        optionVal : {},
-        selected : [],
-        lottoNumbers : []
+        allCheck : {}, //ALL 체크 여부
+        optionVal : {}, //숫자 넣어(Include)/빼(Exclude)
+        selected : [], //랜덤 번호일 경우 선택한 번호 순서대로 체크 여부 배열
+        lottoNumbers : [], //"만들어" 결과 번호 배열
+        recommend: '0', //번호 생성 알고리즘 선택 (0/1/2/3)
+        isRandom: true //랜덤 번호 여부
     }
 
     componentDidMount() {
@@ -23,6 +25,17 @@ class JerryTtoTemplate extends Component {
         this.optionVal = "Include" //기본 숫자 Include
         this.allHandleChange(true);
         this.setState({allCheck: this.allCheck, optionVal: this.optionVal, selected});
+    }
+
+    //번호 생성 알고리즘 선택 시
+    selectHandelChange = (e) => {
+        if(e.target.value === '0' || e.target.value === 0) {
+            this.setState({recommend: e.target.value, isRandom: true});
+        } else {
+            alert("서비스 준비중입니다.")
+            // this.setState({recommend: e.target.value, isRandom: false})
+            //selected 리셋해야됨.
+        }
     }
 
     //전체 체크
@@ -80,8 +93,6 @@ class JerryTtoTemplate extends Component {
         const numbers = [];
         let selectedNumberCount = 0;
 
-        console.log(optionVal)
-
         selected.forEach((s, i) => {
             if(optionVal === "Include") {
                 if(s) {
@@ -120,9 +131,6 @@ class JerryTtoTemplate extends Component {
 
     //몇개 보여줄지.?
     selectBundle = (bundle, numbers) => {
-
-        console.log(numbers)
-
         const {lottoNumbers} = this.state
         for (let i = 0; i < (bundle + 1) * 5; i++) {
             const lotto = this.selectLotto([], numbers);
@@ -160,6 +168,9 @@ class JerryTtoTemplate extends Component {
                         handleButtonOnClick={this.handleButtonOnClick}
                         optionVal={this.optionVal}
                         optionHandleChange={this.optionHandleChange}
+                        recommend={this.state.recommend}
+                        isRandom={this.state.isRandom}
+                        selectHandelChange={this.selectHandelChange}
                     />
                     <JerryTtoContents
                         lottoNumbers={this.state.lottoNumbers}
