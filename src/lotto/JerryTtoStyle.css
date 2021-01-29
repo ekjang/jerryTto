@@ -19,7 +19,7 @@
     resize: initial;
     /*margin: 5px;*/
     width: 970px;
-    height: 95vh;
+    height: 100vh;
 }
 
 .lotto-random-header{
@@ -44,7 +44,7 @@
 
 .lotto-random-sidemenu{
     width: 300px;
-    height: 750px;
+    height: 800px;
     background-color: white;
     border-top: 2px solid lightpink;
     border-left: 2px solid lightpink;
@@ -62,7 +62,7 @@
 
 .lotto-random-contents{
     width: 100%;
-    height: 750px;
+    height: 800px;
     background-color: white;
     border: 2px solid lightpink;
     overflow: scroll;

@@ -14,7 +14,7 @@ class CrawlerTemplate extends Component {
     }
 
     getServer = () => {
-        axios.get(server_url + "/lotto/lotto")
+        axios.get(server_url + "/lotto/win-num-by-round", {params: {roundNo: 921}})
             .then(res => {
                 console.log(res.data)
                 this.setState({

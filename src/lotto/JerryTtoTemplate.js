@@ -4,6 +4,8 @@ import JerryTtoSideMenu from "./JerryTtoSideMenu";
 import JerryTtoContents from "./JerryTtoContents";
 import JerryTtoTopMenu from "./JerryTtoTopMenu";
 import "./JerryTtoStyle.css";
+import axios from "axios";
+import server_url from "./define/UrlDefine";
 
 class JerryTtoTemplate extends Component {
 
@@ -12,7 +14,7 @@ class JerryTtoTemplate extends Component {
         optionVal : {}, //숫자 넣어(Include)/빼(Exclude)
         selected : [], //랜덤 번호일 경우 선택한 번호 순서대로 체크 여부 배열
         lottoNumbers : [], //"만들어" 결과 번호 배열
-        recommend: '0', //번호 생성 알고리즘 선택 (0/1/2/3)
+        recommend: '0', //번호 생성 알고리즘 선택 (0: 랜덤 번호/1: 많이 당첨/2: 많이 당첨 안된/3: 추천)
         isRandom: true //랜덤 번호 여부
     }
 
@@ -33,8 +35,8 @@ class JerryTtoTemplate extends Component {
             this.setState({recommend: e.target.value, isRandom: true});
         } else {
             alert("서비스 준비중입니다.")
-            // this.setState({recommend: e.target.value, isRandom: false})
-            //selected 리셋해야됨.
+            this.allHandleChange(false)
+            this.setState({recommend: e.target.value, isRandom: false})
         }
     }
 
@@ -89,6 +91,28 @@ class JerryTtoTemplate extends Component {
 
     //"만들어" 버튼 클릭
     handleButtonOnClick = () => {
+        const {recommend} = this.state
+        console.log(recommend)
+        if(recommend === '0' || recommend === 0) {
+            this.recommend0()
+        } else if(recommend === '1' || recommend === 1){
+            this.recommend1()
+        }
+    }
+
+    recommend1 = () => {
+        axios.get(server_url + "/recommend/many")
+            .then(res => {
+                console.log(res.data)
+                this.setState({
+                    lottoWinningInfo: res.data,
+                    isSuccess:true
+                });
+            })
+            .catch(res => console.log(res))
+    }
+
+    recommend0 = () => {
         const {selected, lottoNumbers, optionVal} = this.state
         const numbers = [];
         let selectedNumberCount = 0;

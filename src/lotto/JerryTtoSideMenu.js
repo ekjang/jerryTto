@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./JerryTtoStyle.css";
 import NumberPlateComponent from "./plate/NumberPlateComponent";
 import SelectBoxTemplate from "./recommend/SelectBoxTemplate"
+import CrawlerTemplate from "./crawler/CrawlerTemplate"
 
 class JerryTtoSideMenu extends Component {
     render() {
@@ -22,6 +23,7 @@ class JerryTtoSideMenu extends Component {
                     recommend={this.props.recommend}
                     isRandom={this.props.isRandom}
                 />
+                <CrawlerTemplate />
             </div>
         );
     }
